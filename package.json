@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "cors-headers": "^1.0.0"
+  }
+}

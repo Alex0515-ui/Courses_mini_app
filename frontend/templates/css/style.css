@@ -1,0 +1,159 @@
+/* Общие стили */
+body {
+  font-family: "Inter", Arial, sans-serif;
+  margin: 0;
+  background: linear-gradient(135deg, #eef2ff, #f9fafb);
+  color: #1f2937;
+}
+
+section {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Стили фильтров */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem 1.2rem;
+  margin-top: 10px;
+
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 8px 22px rgba(0,0,0,.08);
+  align-items: center;
+}
+
+.filters input[type="text"] {
+  flex: 1 1 260px;
+  padding: 0.55rem 0.7rem;
+  font-size: 0.95rem;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  outline: none;
+  transition: .25s;
+  font-weight: 400;
+}
+
+.filters input[type="text"]:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 2px rgba(99,102,241,.25);
+}
+
+.categories label,
+.sort label {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.sort select {
+  padding: .4rem .6rem;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+}
+
+/* Сетка курсов */
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.2rem;
+  padding: 1.2rem;
+}
+
+/* Карточка курса */
+.course-card {
+  background: linear-gradient(180deg, #ffffff, #fbfbff);
+  border-radius: 16px;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  box-shadow: 0 10px 26px rgba(0,0,0,.08);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 34px rgba(99,102,241,.22);
+}
+
+/* Картинка карточки курса */
+.course-card img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+}
+
+/* Текст в карточке курса */
+.course-card h2 {
+  font-size: 1.05rem;
+  margin: 0.7rem 0.8rem 0.2rem;
+  font-weight: 700;
+}
+
+.course-card h3 {
+  margin: 0 0.8rem 0.4rem;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.course-card p {
+  margin: 0.25rem 0.8rem;
+  color: #374151;
+}
+
+/* Ценник курса */
+.course-card .price {
+  font-weight: 800;
+  color: #22c55e;
+  margin-top: auto;
+  padding: 0.8rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+/* Кнопка загрузки */
+.courses-grid button {
+  grid-column: 1 / -1;
+
+  padding: 0.9rem 1.2rem;
+  border-radius: 12px;
+  border: none;
+
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  color: #fff;
+  cursor: pointer;
+
+  font-size: 1rem;
+  font-weight: 600;
+  transition: .25s;
+}
+
+.courses-grid button:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+}
+
+/* Адаптация */
+@media (max-width: 768px) {
+  .filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filters input[type="text"] {
+    font-size: 0.9rem;
+    padding: 0.45rem 0.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .courses-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .course-card img {
+    height: 200px;
+  }
+}

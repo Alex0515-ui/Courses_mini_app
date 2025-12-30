@@ -1,0 +1,6 @@
+fastapi
+sqlalchemy
+pydantic
+react
+axios
+cors-headers
