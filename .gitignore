@@ -1,0 +1,17 @@
+# Node
+node_modules/
+dist/
+dist-ssr/
+
+# Python
+__pycache__/
+
+# DB
+*.db
+
+# Logs
+logs
+
+.vscode/
+.idea/
+.DS_Store
